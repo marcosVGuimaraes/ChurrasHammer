@@ -1,0 +1,34 @@
+<mat-sidenav-container class="container">
+    <mat-sidenav class="sidenav" mode="side" opened
+    fixedInViewport="true" fixedTopGap="64">
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="/">
+                <i class="material-icons" routerLink="/">
+                    home
+                </i>
+                Inicio
+            </a>
+            <a mat-list-item routerLink="/listaParticipantes" >
+                <i class="material-icons">
+                    assignment
+                </i>
+                Lista de Participantes
+            </a>
+            <a mat-list-item routerLink="/contabilidade" >
+                <i class="material-icons">
+                    attach_money
+                </i>
+                Contabilidade
+            </a>
+            <a mat-list-item routerLink="/listaParticipantes" >
+                <i class="material-icons">
+                    local_grocery_store
+                </i>
+                Compras para o churrasco
+            </a>
+        </mat-nav-list>    
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <router-outlet></router-outlet>    
+    </mat-sidenav-content>
+</mat-sidenav-container>

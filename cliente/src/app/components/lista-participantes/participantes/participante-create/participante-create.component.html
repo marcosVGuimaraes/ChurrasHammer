@@ -1,0 +1,36 @@
+<mat-card>
+    <mat-card-title>Novo Participante</mat-card-title>
+    <div class="formulario">
+        <form>
+            <mat-form-field>
+                <input matInput placeholder="Nome" [(ngModel)]="participante.nome_participante" name="nome_participante">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Matricula" [(ngModel)]="participante.matricula" name="matricula">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Setor" [(ngModel)]="participante.setor" name="setor">
+            </mat-form-field>
+            <div>
+                <label>Consumirá bebida? </label>
+                <mat-radio-group  [(ngModel)]="participante.consumo_bebida" name="consumo_bebida">
+                    <mat-radio-button value="1">Sim</mat-radio-button>
+                    <mat-radio-button value="0">Não</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        
+                
+            
+        </form>
+    </div>
+
+    <button mat-raised-button (click)="createParticipante()" color="primary">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()" >
+        Cancelar
+    </button>
+
+</mat-card>
+

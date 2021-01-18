@@ -1,0 +1,25 @@
+<mat-card>
+    <mat-card-title>Nova compra</mat-card-title>
+    <div class="formulario">
+        <form>
+            <mat-form-field>
+                <input matInput placeholder="Descrição" [(ngModel)]="compra.descricao" name="descricao">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Categoria" [(ngModel)]="compra.categoria" name="categoria">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Valor" [(ngModel)]="compra.valor" name="valor">
+            </mat-form-field>
+        </form>
+    </div>
+
+    <button mat-raised-button (click)="createCompra()" color="primary">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()" >
+        Cancelar
+    </button>
+
+</mat-card>
