@@ -18,8 +18,8 @@ export class ConvidadosUpdateComponent implements OnInit {
 
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.convidadoService.convidadoReadById(id).subscribe(participante=>{
-      this.convidado = participante;
+    this.convidadoService.convidadoReadById(id).subscribe(convidado=>{
+      this.convidado = convidado;
     });
   }
 

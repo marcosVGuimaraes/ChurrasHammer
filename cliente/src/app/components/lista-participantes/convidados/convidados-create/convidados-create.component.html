@@ -6,8 +6,10 @@
                 <input matInput placeholder="Nome" [(ngModel)]="convidado.nome" name="nome">
             </mat-form-field>
             <div>
-                <label>Consumirá bebida ? </label>
-                <mat-radio-group  [(ngModel)]="convidado.consumo_bebida" name="consumo_bebida" required>
+                <label id="radio-group-label">Consumirá bebida ? </label>
+                <mat-radio-group aria-labelledby="radio-group-label"
+                [(ngModel)]="convidado.consumo_bebida" 
+                name="consumo_bebida">
                     <mat-radio-button value="1">Sim</mat-radio-button>
                     <mat-radio-button value="0">Não</mat-radio-button>
                 </mat-radio-group>

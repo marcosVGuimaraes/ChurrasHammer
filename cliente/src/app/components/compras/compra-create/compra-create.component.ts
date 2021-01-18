@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Compra } from 'src/app/shared/model/compra.model';
-import { ContabilidadeService } from 'src/app/shared/service/contabilidade.service';
+import { ComprasService } from 'src/app/shared/service/compras.service';
 
 @Component({
   selector: 'app-compra-create',
@@ -16,7 +16,7 @@ export class CompraCreateComponent implements OnInit {
     valor: null
   }
 
-  constructor(private contabilidadeService: ContabilidadeService, 
+  constructor(private comprasService: ComprasService, 
     private router: Router) { }
 
   ngOnInit(): void {
@@ -24,11 +24,10 @@ export class CompraCreateComponent implements OnInit {
 
   createCompra(): void {
     console.log(this.compra);
-    this.contabilidadeService.salvarCompra(this.compra).subscribe(()=>{
-      this.contabilidadeService.showMensage('Compra Salva!');
+    this.comprasService.salvarCompra(this.compra).subscribe(()=>{
+      this.comprasService.showMensage('Compra Salva!');
       this.router.navigate(['/contabilidade'])
     });
-
   }
 
   cancel(): void {

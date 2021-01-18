@@ -39,7 +39,6 @@ export class ListaConvidadoService {
 
   updateConvidado(convidado: Convidado): Observable<Convidado> {
     const url = this.convidadoURL +"/editarConvidado";
-    console.log(url);
     return this.http.post<Convidado>(url, convidado).pipe(
       map((obj) => obj),
       catchError(e => this.errorHandler(e))

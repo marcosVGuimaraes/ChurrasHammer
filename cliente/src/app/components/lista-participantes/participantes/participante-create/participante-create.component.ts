@@ -13,7 +13,6 @@ export class ParticipanteCreateComponent implements OnInit {
 
   participante: Participante = {
     nome_participante: '',
-    matricula: '',
     setor: '',
     consumo_bebida: false
   }

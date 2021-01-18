@@ -7,3 +7,13 @@ button {
     margin-top: 20px;
     margin-right: 15px;
 }
+
+.formulario .mat-radio-button {
+    margin-bottom: 12px;
+}
+
+.formulario .mat-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}

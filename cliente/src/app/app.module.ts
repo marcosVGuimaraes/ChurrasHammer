@@ -9,7 +9,6 @@ import { NavComponent } from './components/templates/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
 import { ListaParcitipanteCRUDComponent } from './views/lista-parcitipante-crud/lista-parcitipante-crud.component';
 import { ContabilidadeCRUDComponent } from './views/contabilidade-crud/contabilidade-crud.component';
-import { ConsumoCRUDComponent } from './views/consumo-crud/consumo-crud.component';
 
 import {HttpClientModule} from '@angular/common/http';
 
@@ -40,8 +39,8 @@ import { ConvidadosReadComponent } from './components/lista-participantes/convid
 import { ConvidadosUpdateComponent } from './components/lista-participantes/convidados/convidados-update/convidados-update.component';
 import { ConvidadosCreateComponent } from './components/lista-participantes/convidados/convidados-create/convidados-create.component';
 import { ContabilidadeReadComponent } from './components/contabilidade/contabilidade-read/contabilidade-read.component';
-import { ComprasReadComponent } from './components/compras/compras-read/compras-read.component';
 import { CompraCreateComponent } from './components/compras/compra-create/compra-create.component';
+import { CompraUpdateComponent } from './components/compras/compra-update/compra-update.component';
 
 registerLocaleData(localePt);
 
@@ -53,7 +52,6 @@ registerLocaleData(localePt);
     HomeComponent,
     ListaParcitipanteCRUDComponent,
     ContabilidadeCRUDComponent,
-    ConsumoCRUDComponent,
     ParticipanteCreateComponent,
     ParticipantesReadComponent,
     ParticipantesUpdateComponent,
@@ -62,8 +60,8 @@ registerLocaleData(localePt);
     ConvidadosUpdateComponent,
     ConvidadosCreateComponent,
     ContabilidadeReadComponent,
-    ComprasReadComponent,
-    CompraCreateComponent
+    CompraCreateComponent,
+    CompraUpdateComponent
   ],
   imports: [
     BrowserModule,

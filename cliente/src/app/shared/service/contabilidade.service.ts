@@ -24,22 +24,6 @@ export class ContabilidadeService {
     );
   }
 
-  salvarCompra(compra: Compra): Observable<Compra> {
-    const url = this.comprasBaseURL + "/salvarCompra";
-    return this.http.post<Compra>(url, compra).pipe(
-      map((obj) => obj),
-      catchError(e => this.errorHandler(e))
-    );
-  }
-
-  deleteCompra(id: number): Observable<Contabilidade>{
-    const url = this.contabilidadeBaseURL + "/deleteCompra";
-    return this.http.post<Contabilidade>(url, {id: id}).pipe(
-      map((obj) => obj),
-      catchError(e => this.errorHandler(e))
-    );
-  }
-
   errorHandler(e: any): Observable<any>{
     this.showMensage('Ocorreu um erro!', true);
     return EMPTY;

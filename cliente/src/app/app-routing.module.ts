@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CompraCreateComponent } from './components/compras/compra-create/compra-create.component';
+import { CompraUpdateComponent } from './components/compras/compra-update/compra-update.component';
 import { ContabilidadeReadComponent } from './components/contabilidade/contabilidade-read/contabilidade-read.component';
 import { ParticipanteCreateComponent } from './components/lista-participantes//participantes/participante-create/participante-create.component';
 import { ConvidadosCreateComponent } from './components/lista-participantes/convidados/convidados-create/convidados-create.component';
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path:"compra/cadastrarCompra",
     component: CompraCreateComponent
+  },
+  {
+    path:"compra/editarCompra/:id",
+    component: CompraUpdateComponent
   }
   
 ];

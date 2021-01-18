@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Convidado } from 'src/app/shared/model/convidado.model';
 import { ListaConvidadoService } from 'src/app/shared/service/lista-convidado.service';
@@ -11,8 +10,6 @@ import { ListaConvidadoService } from 'src/app/shared/service/lista-convidado.se
 })
 export class ConvidadosCreateComponent implements OnInit {
 
-  convidadoForm: FormGroup;
-
   convidado: Convidado = {
     nome: '',    
     id_participante: 0,
@@ -21,13 +18,9 @@ export class ConvidadosCreateComponent implements OnInit {
 
   constructor(private convidadoService: ListaConvidadoService, 
     private router: Router,
-    private route: ActivatedRoute,
-    private fb: FormBuilder) { }
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.convidadoForm = this.fb.group({
-      
-    })
     this.convidado.id_participante = +this.route.snapshot.paramMap.get('id');
   }
 

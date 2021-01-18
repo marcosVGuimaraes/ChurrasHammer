@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { Compra } from 'src/app/shared/model/compra.model';
 import { Contabilidade } from 'src/app/shared/model/contabilidade.model';
+import { ComprasService } from 'src/app/shared/service/compras.service';
 import { ContabilidadeService } from 'src/app/shared/service/contabilidade.service';
 import { ConfirmDialogComponent } from '../../templates/dialogs/confirm-dialog/confirm-dialog.component';
 
@@ -18,6 +18,7 @@ export class ContabilidadeReadComponent implements OnInit {
   displayedColumns = ['descricao', 'categoria', 'valor', 'action']
 
   constructor(private convidadoService: ContabilidadeService,
+    private comprasService: ComprasService,
     private dialog: MatDialog,
     private router: Router) { }
 
@@ -45,8 +46,8 @@ export class ContabilidadeReadComponent implements OnInit {
     });
     confirmDialog.afterClosed().subscribe(result => {
       if (result === true) {
-       this.convidadoService.deleteCompra(id).subscribe(result =>{
-        this.convidadoService.showMensage('Participante Exlcuido!');
+       this.comprasService.deleteCompra(id).subscribe(result =>{
+        this.comprasService.showMensage('Compra Exlcuida!');
         this.getContabilidade();
        })
       }

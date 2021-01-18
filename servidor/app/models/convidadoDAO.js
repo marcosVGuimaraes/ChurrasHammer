@@ -3,7 +3,7 @@ function convidadoDAO(connection){
 }
 
 convidadoDAO.prototype.FindAll = function(callback){
-	this._connection.query("select c.*, p.nome_participante as convidado_por from convidado as c INNER JOIN participantes as p on (c.id_participante = p.id_participante)", callback);
+	this._connection.query("select c.*, p.nome_participante as convidado_por from convidado as c INNER JOIN participantes as p on (c.id_participante = p.id_participante) order by c.nome", callback);
 }
 
 convidadoDAO.prototype.FindByID = function(id_convidado, callback){

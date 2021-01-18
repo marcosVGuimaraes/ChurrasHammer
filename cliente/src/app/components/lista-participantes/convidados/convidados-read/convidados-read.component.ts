@@ -14,7 +14,7 @@ export class ConvidadosReadComponent implements OnInit {
  
   convidados: Convidado[]
 
-  displayedColumns = ['nome', 'consumo_bebida','action']
+  displayedColumns = ['nome', 'convidado_por', 'consumo_bebida','action']
   
   constructor(private convidadoService: ListaConvidadoService,
     private dialog: MatDialog,
